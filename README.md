@@ -2,7 +2,7 @@
 
 Version: 1.0
 
-This custom UI component creates a button that is customizable in several additional ways with respect to the built-in ``uibutton`` component in MATLAB. Additional customizations can be addeed with CSS and JavaScript. This custom component can be included inside graphical user interfaces and be made available inside App Designer.
+This custom UI component creates a button that is customizable in several additional ways with respect to the built-in ``uibutton`` component in MATLAB&reg;. Additional customizations can be addeed with CSS and JavaScript&reg;. This custom component can be included inside graphical user interfaces and be made available inside App Designer.
 
 <img src="button_example.png" width="200">
 
