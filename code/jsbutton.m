@@ -8,30 +8,30 @@ classdef jsbutton < matlab.ui.componentcontainer.ComponentContainer
     end % events (HasCallbackProperty, NotifyAccess = private)
 
     properties
-        BorderBottomColor           matlab.internal.datatype.matlab.graphics.datatype.RGBColor = [.5 .5 .5]
-        BorderLeftColor             matlab.internal.datatype.matlab.graphics.datatype.RGBColor = [.5 .5 .5]
-        BorderRightColor            matlab.internal.datatype.matlab.graphics.datatype.RGBColor = [.5 .5 .5]
-        BorderTopColor              matlab.internal.datatype.matlab.graphics.datatype.RGBColor = [.5 .5 .5]
+        BorderBottomColor           {validatecolor} = [.5 .5 .5]
+        BorderLeftColor             {validatecolor} = [.5 .5 .5]
+        BorderRightColor            {validatecolor} = [.5 .5 .5]
+        BorderTopColor              {validatecolor} = [.5 .5 .5]
         BorderBottomThickness (1,1) double {mustBeNonnegative} = 1
         BorderLeftThickness (1,1)   double {mustBeNonnegative} = 1
         BorderRightThickness (1,1)  double {mustBeNonnegative} = 1
         BorderTopThickness (1,1)    double {mustBeNonnegative} = 1
         BorderRadius (1,1)          double {mustBeNonnegative} = 4
-        ButtonColor                 matlab.internal.datatype.matlab.graphics.datatype.RGBColor = [.96 .96 .96]
-        ButtonBackgroundColor       matlab.internal.datatype.matlab.graphics.datatype.RGBColor = [.94 .94 .94]
+        ButtonColor                 {validatecolor} = [.96 .96 .96]
+        ButtonBackgroundColor       {validatecolor} = [.94 .94 .94]
         Enable (1,1)                logical = true
-        FontColor                   matlab.internal.datatype.matlab.graphics.datatype.RGBColor = "black"
+        FontColor                   {validatecolor} = "black"
         FontName                    {mustBeTextScalar} = "Helvetica"
         FontSize (1,1)              {mustBeNumeric, mustBePositive} = 12
         FontWeight                  TextFont = TextFont.normal
         HoverFontWeight             TextFont = TextFont.normal
         HorizontalAlignment         TextAlign = TextAlign.center
-        HoverBorderBottomColor      matlab.internal.datatype.matlab.graphics.datatype.RGBColor = [.5 .5 .5]
-        HoverBorderLeftColor        matlab.internal.datatype.matlab.graphics.datatype.RGBColor = [.5 .5 .5]
-        HoverBorderRightColor       matlab.internal.datatype.matlab.graphics.datatype.RGBColor = [.5 .5 .5]
-        HoverBorderTopColor         matlab.internal.datatype.matlab.graphics.datatype.RGBColor = [.5 .5 .5]
-        HoverButtonColor            matlab.internal.datatype.matlab.graphics.datatype.RGBColor = "white"
-        HoverTextColor              matlab.internal.datatype.matlab.graphics.datatype.RGBColor = "black"
+        HoverBorderBottomColor      {validatecolor} = [.5 .5 .5]
+        HoverBorderLeftColor        {validatecolor} = [.5 .5 .5]
+        HoverBorderRightColor       {validatecolor} = [.5 .5 .5]
+        HoverBorderTopColor         {validatecolor} = [.5 .5 .5]
+        HoverButtonColor            {validatecolor} = "white"
+        HoverTextColor              {validatecolor} = "black"
         HoverTextUnderline (1,1)    logical = false
         Icon                        {mustBeTextScalar} = ""
         IconAlignment               IconAlign = IconAlign.right
@@ -137,6 +137,7 @@ classdef jsbutton < matlab.ui.componentcontainer.ComponentContainer
   
             function out = rgb2hex(rgb)
                 % Convert RGB to hexadecimal representation
+                rgb = validatecolor(rgb);
                 hex = dec2hex(round(255*rgb));
                 out = ['#' hex(1,:) hex(2,:) hex(3,:)];
             end % rgb2hex
