@@ -1,5 +1,5 @@
-classdef jsbutton < matlab.ui.componentcontainer.ComponentContainer
-    %JSBUTTON Customizable javascript button.
+classdef htmlbutton < matlab.ui.componentcontainer.ComponentContainer
+    %HTMLBUTTON Customizable HTML button.
     %
     %   Copyright 2023 The MathWorks, Inc.
 
@@ -69,17 +69,17 @@ classdef jsbutton < matlab.ui.componentcontainer.ComponentContainer
     end % properties (Access = private)
 
     methods
-        function obj = jsbutton(Parent, opts)
-            %JSBUTTON Class constructor
+        function obj = htmlbutton(Parent, opts)
+            %HTMLBUTTON Class constructor
             %
-            %   jsbutton(Parent, opts) creates a customizable button.
+            %   htmlbutton(Parent, opts) creates a customizable button.
             %   Specify Parent as a container object such as uifigure,
             %   uipanel or uigridlayout, and opts as Name=Value arguments
             %   including public properties of jsbutton.
 
             arguments
                 Parent = []
-                opts.?jsbutton
+                opts.?htmlbutton
             end
 
             % Call superconstructor to assign parent
