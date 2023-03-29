@@ -1,4 +1,4 @@
-# JavaScript Button
+# Customizable HTML Button
 
 Version: 1.0
 
@@ -7,7 +7,7 @@ This custom UI component creates a button that is customizable in several additi
 <img src="images/button_example.png" width="200">
 
 ## Example
-JavaScript buttons can be used on their own inside an app, or they can be used to create new composite components, such as a tab group, as shown below:
+Customizable HTML buttons can be used on their own inside an app, or they can be used to create new composite components, such as a tab group, as shown below:
 
 <img src="images/app_example.png" width="">
 
