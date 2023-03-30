@@ -99,6 +99,7 @@ classdef htmlbutton < matlab.ui.componentcontainer.ComponentContainer
             obj.HTMLComponent = uihtml(g);
             obj.HTMLComponent.HTMLSource = "button.html";
             obj.HTMLComponent.DataChangedFcn = @(~,~) notify(obj, "ButtonPushed");
+            % from R2023a: obj.HTMLComponent.HTMLEventReceivedFcn = @(~,~) notify(obj, "ButtonPushed");
         end % setup
 
         function update(obj)
